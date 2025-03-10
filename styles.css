@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #002b5c;
+    background-color: rgba(175, 168, 168, 0.455);
+    padding-top: 10px; /* Adjust based on navbar height */
+}
+
+.large-heading {
+    font-size: 4em; /* Adjust the size to your preference */
+    background-color: rgba(0, 0, 139, 0.514);
+    color: whitesmoke;
+    animation: alternate;
+}
+
+
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.0s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.header-content {
+    position: absolute;
+    width: 100%;  /* Stretch the content full-width */
+    text-align: center;
+    color: darkblue;
+    background: rgba(154, 191, 234, 0.279);
+    padding: 100%;  /* Adjust vertical padding as needed */
+    border-radius: 10px;
+    z-index: 10; /* Ensure it's above slides */
+}
+
+
+h1, h2 {
+    color: #0056b3;
+}
+
+.navbar {
+    position: fixed; /* Keeps navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch across the screen */
+    background-color: #002B5C; /* Adjust to match your color scheme */
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hamburger Button Styling */
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Hide on larger screens */
+}
+
+/* Nav Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #002B5C;
+        flex-direction: column;
+        gap: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .nav-links.open {
+        max-height: 300px; /* Adjust based on the number of items */
+    }
+}
+
+.subject {
+    color: #ddd;
+    background-color:#002B5C;
+    position: relative;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Ensures text alignment is centered */
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.product-item {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    border-radius: 20px;
+}
+
+
+.price {
+    color: green;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+
+
+.description {
+    font-size: 13px;
+}
+
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.buy-btn {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: skyblue;
+}
+
+#contact h2 {
+    margin-bottom: 15px; /* Optional: add some space below the heading */
+}
+
+#contact p {
+    margin: 10px 0; /* Optional: adjust space between paragraphs */
+}
+
+
+
+
+footer {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
