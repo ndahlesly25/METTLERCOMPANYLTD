@@ -20,6 +20,14 @@ let slideIndex = 0;
     const navLinks = document.querySelector('.nav-links');
     
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+        navLinks.classList.toggle('active');
     });
     
+// Close menu when clicking outside or selecting a menu item
+document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        navLinks.classList.remove('active');
+    }
+});  
+
+
