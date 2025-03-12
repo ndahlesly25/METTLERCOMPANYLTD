@@ -191,34 +191,126 @@ h1, h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional for a clean look */
 }
 
+/* Subject Heading Styling */
 .subject {
-    color: #ddd;
-    background-color:#002B5C;
-    position: relative;
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Ensures text alignment is centered */
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
+/* Products Section Styling */
+#products {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
 
+/* Heading Styling */
+#products h2 {
+    font-size: 2rem;
+    color: #002B5C;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+
+/* Product Grid Styling */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
+/* Product Item Styling */
 .product-item {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    transition: transform 0.3s;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
 }
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 70%;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Product Title Styling */
+.product-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 12px 0 8px;
+}
+/* Description Styling */
+.product-item .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+/* Price Styling */
+.product-item .price {
+    font-size: 1rem;
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Buy Button Styling */
+.buy-btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #products h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-item img {
+        height: 150px;
+    }
+}
+
+
+#products h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 8px auto 0;
+}
+
+
+
+
+
 
 
 .price {
@@ -230,10 +322,7 @@ h3 {
     color: #000;
 }
 
-.product-item:hover {
-    transform: scale(1.05);
-    border-radius: 20px;
-}
+
 
 
 .description {
@@ -243,11 +332,7 @@ h3 {
 }
 
 
-.product-item img {
-    width: 70%;
-    height: 70px;
-    object-fit: contain;
-}
+
 
 .price {
     font-size: small;
@@ -341,3 +426,85 @@ footer {
 }
 
 
+
+
+
+/* General Section Styling */
+section {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #002B5C;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Decorative line under headings */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 10px auto;
+}
+
+/* About Section Styling */
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Vision and Mission List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for list items */
+ul li:hover {
+    background-color: #f0f0f04c;
+    cursor: pointer;
+}
+
+/* Add subtle fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #about p, ul li {
+        font-size: 1rem;
+    }
+}
