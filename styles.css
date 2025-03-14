@@ -93,23 +93,27 @@ h1, h2 {
 
 /* Hamburger Button Styling */
 .hamburger {
-    background: none;
+    background-color: #333;
+    color: #fff;
     border: none;
-    color: white;
-    font-size: 28px;
+    padding: 10px;
     cursor: pointer;
-    display: none; /* Hide on larger screens */
+    font-size: 24px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Nav Links Styling */
-
-
-.nav-links li {
-   /* display: inline; */
-   margin: 0;
+.hamburger:hover {
+    background-color: #ffcc0025;
 }
 
-.nav-links a {
+
+
+ .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -186,11 +190,10 @@ h1, h2 {
 
 .nav-links li {
     padding: 8px 10px; /* Reduced padding inside each item */
-    margin: 0; /* Remove extra margins */
+    margin:5px 0; /* Remove extra margins */
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional for a clean look */
 }
-
 /* Subject Heading Styling */
 .subject {
     font-size: 1.8rem;

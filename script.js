@@ -16,17 +16,23 @@ let slideIndex = 0;
     setInterval(showSlides, 4000);
     showSlides();
 
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+
+    /* Hamburger */
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
     });
-    
-// Close menu when clicking outside or selecting a menu item
-document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-        navLinks.classList.remove('active');
-    }
-});  
+
 
