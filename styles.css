@@ -8,7 +8,7 @@ body {
 }
 
 .large-heading {
-    font-size: 3em; /* Adjust the size to your preference */
+    font-size: 2em; /* Adjust the size to your preference */
     background-color: #002b5c84;
     color: whitesmoke;
     animation: alternate;
